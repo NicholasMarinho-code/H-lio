@@ -1,5 +1,5 @@
 /* =========================================================
-   HÉLIOS — Interações (JavaScript puro)
+   HÉLIOS — Interactions (vanilla JavaScript)
    ========================================================= */
 (function () {
   'use strict';
@@ -12,11 +12,11 @@
   var menu = document.getElementById('menu-principal');
   var toTop = document.getElementById('to-top');
 
-  /* ---------- Menu mobile ---------- */
+  /* ---------- Mobile menu ---------- */
   function setMenu(open) {
     menu.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   }
   toggle.addEventListener('click', function () {
     setMenu(toggle.getAttribute('aria-expanded') !== 'true');
@@ -29,7 +29,7 @@
   });
   window.addEventListener('resize', function () { if (window.innerWidth > 980) setMenu(false); });
 
-  /* ---------- Navegação suave ---------- */
+  /* ---------- Smooth navigation ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
       var id = link.getAttribute('href');
@@ -48,11 +48,11 @@
     window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
   });
 
-  /* ---------- Cabeçalho, botão de topo e link ativo ---------- */
+  /* ---------- Header, back-to-top button and active link ---------- */
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
   var trackedSections = navLinks.map(function (l) { return document.querySelector(l.getAttribute('href')); });
 
-  // Seções que não têm link próprio no menu mapeiam para o link mais próximo
+  // Sections without their own menu link map to the nearest link
   var extraMap = { sobre: 'inicio', plataforma: 'engenharia', diferenciais: 'investimento', encerramento: 'investimento' };
 
   function onScroll() {
@@ -78,7 +78,7 @@
   }, { passive: true });
   onScroll();
 
-  /* ---------- Animações de entrada ---------- */
+  /* ---------- Entrance animations ---------- */
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
@@ -95,24 +95,24 @@
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ---------- Dados financeiros (plano de negócios) ---------- */
+  /* ---------- Financial data (business plan) ---------- */
   var investment = [
-    { name: 'Prototipagem e engenharia', value: 55000, color: '#F0D69A' },
-    { name: 'Matéria-prima e lote inicial', value: 35000, color: '#D8AD62' },
-    { name: 'Marketing de lançamento', value: 30000, color: '#B98A3E' },
-    { name: 'Capital de giro', value: 20000, color: '#8F8579' },
-    { name: 'Burocracia e certificações', value: 10000, color: '#E8E0D2' }
+    { name: 'Prototyping and engineering', value: 55000, color: '#F0D69A' },
+    { name: 'Raw materials and initial batch', value: 35000, color: '#D8AD62' },
+    { name: 'Launch marketing', value: 30000, color: '#B98A3E' },
+    { name: 'Working capital', value: 20000, color: '#8F8579' },
+    { name: 'Paperwork and certifications', value: 10000, color: '#E8E0D2' }
   ];
   var TOTAL = 150000;
 
-  function brl(n) { return 'R$ ' + n.toLocaleString('pt-BR'); }
-  function pct(n) { return (n / TOTAL * 100).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + '%'; }
+  function brl(n) { return 'R$ ' + n.toLocaleString('en-US'); }
+  function pct(n) { return (n / TOTAL * 100).toLocaleString('en-US', { maximumFractionDigits: 1 }) + '%'; }
 
-  // Confere a consistência: a soma das categorias deve ser R$ 150.000
+  // Consistency check: the sum of the categories must be R$ 150,000
   var sum = investment.reduce(function (a, i) { return a + i.value; }, 0);
-  if (sum !== TOTAL) console.warn('HÉLIOS: a soma do investimento (' + sum + ') difere de ' + TOTAL + '.');
+  if (sum !== TOTAL) console.warn('HÉLIOS: the investment sum (' + sum + ') differs from ' + TOTAL + '.');
 
-  /* ---------- Gráfico de rosca (SVG puro) ---------- */
+  /* ---------- Donut chart (vanilla SVG) ---------- */
   var donut = document.getElementById('donut');
   var svg = donut.querySelector('svg');
   var legend = document.getElementById('legend');
@@ -186,7 +186,7 @@
     });
   }
 
-  /* ---------- Linha do tempo (barras) ---------- */
+  /* ---------- Timeline (bars) ---------- */
   function drawTimeline() {
     document.querySelectorAll('#timeline .tl-col').forEach(function (col, i) {
       var v = parseFloat(col.dataset.value), m = parseFloat(col.dataset.max);
@@ -195,22 +195,22 @@
     });
   }
 
-  /* ---------- Contador animado do investimento ---------- */
+  /* ---------- Animated investment counter ---------- */
   function countUp(el) {
     var end = parseInt(el.dataset.count, 10);
-    if (reduceMotion) { el.textContent = end.toLocaleString('pt-BR'); return; }
+    if (reduceMotion) { el.textContent = end.toLocaleString('en-US'); return; }
     var start = null, dur = 1600;
     function step(ts) {
       if (start === null) start = ts;
       var p = Math.min((ts - start) / dur, 1);
       var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(end * eased).toLocaleString('pt-BR');
+      el.textContent = Math.round(end * eased).toLocaleString('en-US');
       if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
   }
 
-  /* ---------- Diagrama de funcionamento (Engenharia) ---------- */
+  /* ---------- How-it-works diagram (Engineering) ---------- */
   var flow = document.getElementById('flow');
   var nodes = document.querySelectorAll('.flow-node');
   var dTag = document.getElementById('flow-detail-tag');
@@ -221,7 +221,7 @@
     var steps = Array.prototype.slice.call(flow.querySelectorAll('.flow-node'));
     var pulseIdx = 0, pulseTimer = null, userTouched = false;
 
-    // Destaque sequencial suave que mostra o caminho da energia (para ao primeiro clique)
+    // Soft sequential highlight showing the energy path (stops on first click)
     var pulse = function () {
       steps.forEach(function (s, k) { s.classList.toggle('pulse', k === pulseIdx); });
       pulseIdx = (pulseIdx + 1) % steps.length;
@@ -253,7 +253,7 @@
     }
   }
 
-  /* Dispara cada animação quando o elemento aparece na tela */
+  /* Triggers each animation when the element appears on screen */
   function whenVisible(el, fn) {
     if (!('IntersectionObserver' in window)) { fn(); return; }
     var o = new IntersectionObserver(function (entries) {

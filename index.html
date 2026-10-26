@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HÉLIOS — Energia que acompanha você</title>
-  <meta name="description" content="HÉLIOS: carregador solar portátil que transforma a luz do Sol em energia para seus dispositivos. Projeto acadêmico fictício.">
+  <title>HÉLIOS — Energy that goes with you</title>
+  <meta name="description" content="HÉLIOS: a portable solar charger that turns sunlight into power for your devices. Fictional academic project.">
   <meta name="theme-color" content="#0B0907">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
-<!-- ============ SÍMBOLOS SVG REUTILIZÁVEIS ============ -->
+<!-- ============ REUSABLE SVG SYMBOLS ============ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <!-- Marca HÉLIOS: sol + carruagem (inspirada no logotipo de referência) -->
+    <!-- HÉLIOS mark: sun + chariot (inspired by the reference logo) -->
     <symbol id="logo-mark" viewBox="0 0 200 130">
       <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="62" cy="62" r="20" stroke-width="3"/>
@@ -42,7 +42,7 @@
       </g>
     </symbol>
 
-    <!-- Ícones -->
+    <!-- Icons -->
     <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></g></symbol>
     <symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></g></symbol>
     <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
@@ -59,7 +59,7 @@
     <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></g></symbol>
     <symbol id="i-expand" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></g></symbol>
 
-    <!-- Ícones da seção de engenharia -->
+    <!-- Engineering section icons -->
     <symbol id="i-panel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l2-4h14l2 4v10H3z"/><path d="M9 4L8 8v10M15 4l1 4v10M3 13h18"/></g></symbol>
     <symbol id="i-battery" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 10.5v3"/><path d="M11.5 9.5l-2 2.5h3l-2 2.5"/></g></symbol>
     <symbol id="i-converter" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M6 12h3l1.5-4 3 8 1.5-4h3"/></g></symbol>
@@ -71,7 +71,7 @@
     <symbol id="i-box" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v10l-8 4-8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></g></symbol>
     <symbol id="i-warn" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.4"/></g></symbol>
 
-    <!-- Ilustração substituta do produto (usada só se a foto não existir) -->
+    <!-- Fallback product illustration (used only if the photo is missing) -->
     <symbol id="product-art" viewBox="0 0 640 400">
       <rect width="640" height="400" fill="#15110D"/>
       <circle cx="140" cy="90" r="120" fill="#D8AD62" opacity=".08"/>
@@ -88,37 +88,37 @@
   </defs>
 </svg>
 
-<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<a class="skip-link" href="#conteudo">Skip to content</a>
 
-<!-- ============ SEÇÃO 1 — MENU ============ -->
+<!-- ============ SECTION 1 — MENU ============ -->
 <header class="site-header" id="topo">
   <div class="container header-inner">
-    <a href="#inicio" class="brand" aria-label="HÉLIOS — ir para o início">
+    <a href="#inicio" class="brand" aria-label="HÉLIOS — go to the top">
       <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
       <span class="brand-name">HÉLIOS</span>
     </a>
 
-    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-principal">
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+    <nav class="main-nav" id="menu-principal" aria-label="Main navigation">
       <ul>
-        <li><a href="#inicio" class="nav-link">Início</a></li>
-        <li><a href="#produto" class="nav-link">Produto</a></li>
-        <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
-        <li><a href="#engenharia" class="nav-link">Engenharia</a></li>
-        <li><a href="#mercado" class="nav-link">Mercado</a></li>
-        <li><a href="#investimento" class="nav-link">Investimento</a></li>
+        <li><a href="#inicio" class="nav-link">Home</a></li>
+        <li><a href="#produto" class="nav-link">Product</a></li>
+        <li><a href="#beneficios" class="nav-link">Benefits</a></li>
+        <li><a href="#engenharia" class="nav-link">Engineering</a></li>
+        <li><a href="#mercado" class="nav-link">Market</a></li>
+        <li><a href="#investimento" class="nav-link">Investment</a></li>
       </ul>
-      <a href="#sobre" class="btn btn-gold btn-sm">Conheça o projeto</a>
+      <a href="#sobre" class="btn btn-gold btn-sm">Discover the project</a>
     </nav>
   </div>
 </header>
 
 <main id="conteudo">
 
-<!-- ============ SEÇÃO 2 — HERO ============ -->
+<!-- ============ SECTION 2 — HERO ============ -->
 <section class="hero" id="inicio" aria-labelledby="hero-titulo">
   <div class="hero-glow" aria-hidden="true"></div>
   <svg class="orbits" viewBox="0 0 800 800" aria-hidden="true">
@@ -135,20 +135,20 @@
 
   <div class="container hero-grid">
     <div class="hero-text reveal">
-      <p class="eyebrow">Startup de tecnologia sustentável</p>
-      <h1 id="hero-titulo">A energia do Sol.<br><span class="gold-text">A liberdade de ir além.</span></h1>
-      <p class="lead">A HÉLIOS transforma a luz solar em energia portátil, conectando tecnologia, mobilidade e sustentabilidade em um único produto.</p>
+      <p class="eyebrow">Sustainable technology startup</p>
+      <h1 id="hero-titulo">The Sun's energy.<br><span class="gold-text">The freedom to go further.</span></h1>
+      <p class="lead">HÉLIOS turns sunlight into portable power, bringing technology, mobility and sustainability together in a single product.</p>
       <div class="btn-row">
-        <a href="#produto" class="btn btn-gold">Descubra o produto</a>
-        <a href="#sobre" class="btn btn-outline">Conheça a HÉLIOS</a>
+        <a href="#produto" class="btn btn-gold">Discover the product</a>
+        <a href="#sobre" class="btn btn-outline">Meet HÉLIOS</a>
       </div>
-      <p class="hero-tagline">TECNOLOGIA SOLAR • ENERGIA PORTÁTIL • FUTURO SUSTENTÁVEL</p>
+      <p class="hero-tagline">SOLAR TECHNOLOGY • PORTABLE ENERGY • SUSTAINABLE FUTURE</p>
     </div>
 
     <div class="hero-visual reveal" data-delay="150">
       <div class="media-frame media-hero">
         <svg class="media-fallback" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><use href="#product-art"/></svg>
-        <img src="imagens/carregador-solar.jpg" alt="Carregador solar portátil da HÉLIOS carregando um celular sobre uma mesa de madeira em um acampamento" onerror="this.remove()">
+        <img src="imagens/carregador-solar.jpg" alt="HÉLIOS portable solar charger charging a phone on a wooden table at a campsite" onerror="this.remove()">
         <span class="frame-corner tl" aria-hidden="true"></span>
         <span class="frame-corner br" aria-hidden="true"></span>
       </div>
@@ -156,330 +156,330 @@
   </div>
 </section>
 
-<!-- ============ SEÇÃO 3 — SOBRE ============ -->
+<!-- ============ SECTION 3 — ABOUT ============ -->
 <section class="section" id="sobre" aria-labelledby="sobre-titulo">
   <div class="container about-grid">
     <div class="about-visual reveal">
       <div class="logo-plate">
-        <svg class="logo-big" role="img" aria-label="Logotipo HÉLIOS: sol dourado com carruagem"><use href="#logo-mark"/></svg>
+        <svg class="logo-big" role="img" aria-label="HÉLIOS logo: golden sun with chariot"><use href="#logo-mark"/></svg>
         <p class="logo-word">HĒLIOS</p>
         <div class="logo-rule" aria-hidden="true"><i></i><b></b><i></i></div>
       </div>
     </div>
 
     <div class="about-text reveal" data-delay="120">
-      <p class="eyebrow">Sobre a HÉLIOS</p>
-      <h2 id="sobre-titulo">Inspirada pelo Sol. <span class="gold-text">Criada para o futuro.</span></h2>
-      <p>A HÉLIOS nasce da ideia de tornar a energia mais acessível, prática e sustentável. Inspirada na mitologia grega, em que Hélio atravessava o céu conduzindo sua carruagem solar, a marca representa movimento, autonomia e energia sem limites.</p>
+      <p class="eyebrow">About HÉLIOS</p>
+      <h2 id="sobre-titulo">Inspired by the Sun. <span class="gold-text">Built for the future.</span></h2>
+      <p>HÉLIOS was born from the idea of making energy more accessible, practical and sustainable. Inspired by Greek mythology, in which Helios crossed the sky driving his solar chariot, the brand represents movement, autonomy and limitless energy.</p>
 
       <ul class="pill-list">
-        <li><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg><span>Inovação tecnológica</span></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg><span>Mobilidade inteligente</span></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><span>Consciência ambiental</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg><span>Technological innovation</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg><span>Smart mobility</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><span>Environmental awareness</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ============ SEÇÃO 4 — PRODUTO ============ -->
+<!-- ============ SECTION 4 — PRODUCT ============ -->
 <section class="section section-alt" id="produto" aria-labelledby="produto-titulo">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">O produto</p>
-      <h2 id="produto-titulo">Conheça o <span class="gold-text">carregador solar portátil.</span></h2>
-      <p class="lead">Uma solução desenvolvida para quem precisa de energia mesmo longe das tomadas. O carregador solar portátil utiliza painéis fotovoltaicos para converter a luz solar em eletricidade e permitir o carregamento de dispositivos compatíveis.</p>
+      <p class="eyebrow">The product</p>
+      <h2 id="produto-titulo">Meet the <span class="gold-text">portable solar charger.</span></h2>
+      <p class="lead">A solution designed for people who need power even far from outlets. The portable solar charger uses photovoltaic panels to convert sunlight into electricity and charge compatible devices.</p>
     </div>
 
     <div class="product-grid">
       <div class="reveal">
         <div class="media-frame media-product">
           <svg class="media-fallback" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><use href="#product-art"/></svg>
-          <img src="imagens/carregador-solar.jpg" alt="Carregador solar portátil com dois painéis fotovoltaicos conectado a um celular, sobre uma mesa de madeira em um acampamento à beira de um rio" loading="lazy" onerror="this.remove()">
+          <img src="imagens/carregador-solar.jpg" alt="Portable solar charger with two photovoltaic panels connected to a phone, on a wooden table at a riverside campsite" loading="lazy" onerror="this.remove()">
           <span class="frame-corner tl" aria-hidden="true"></span>
           <span class="frame-corner br" aria-hidden="true"></span>
         </div>
         <p class="notice"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg>
-          <span>O desempenho do carregamento depende da intensidade da luz solar, da capacidade do painel e das especificações do dispositivo.</span></p>
+          <span>Charging performance depends on sunlight intensity, panel capacity and the device's specifications.</span></p>
       </div>
 
       <div class="feature-cards">
         <article class="card reveal" data-delay="0">
           <svg class="icon icon-lg" aria-hidden="true"><use href="#i-sun"/></svg>
-          <h3>Energia solar</h3>
-          <p>Aproveita uma fonte renovável de energia.</p>
+          <h3>Solar energy</h3>
+          <p>Harnesses a renewable energy source.</p>
         </article>
         <article class="card reveal" data-delay="80">
           <svg class="icon icon-lg" aria-hidden="true"><use href="#i-bag"/></svg>
-          <h3>Portabilidade</h3>
-          <p>Ideal para viagens, acampamentos e atividades ao ar livre.</p>
+          <h3>Portability</h3>
+          <p>Ideal for travel, camping and outdoor activities.</p>
         </article>
         <article class="card reveal" data-delay="160">
           <svg class="icon icon-lg" aria-hidden="true"><use href="#i-bolt"/></svg>
-          <h3>Praticidade</h3>
-          <p>Oferece uma alternativa de carregamento em locais sem tomadas.</p>
+          <h3>Convenience</h3>
+          <p>Offers a charging alternative where there are no outlets.</p>
         </article>
         <article class="card reveal" data-delay="240">
           <svg class="icon icon-lg" aria-hidden="true"><use href="#i-leaf"/></svg>
-          <h3>Sustentabilidade</h3>
-          <p>Incentiva o uso de fontes renováveis de energia.</p>
+          <h3>Sustainability</h3>
+          <p>Encourages the use of renewable energy sources.</p>
         </article>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ SEÇÃO 5 — BENEFÍCIOS ============ -->
+<!-- ============ SECTION 5 — BENEFITS ============ -->
 <section class="section" id="beneficios" aria-labelledby="beneficios-titulo">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Por que somos inovadores</p>
-      <h2 id="beneficios-titulo">Mais liberdade. <span class="gold-text">Menos dependência de tomadas.</span></h2>
+      <p class="eyebrow">Why we are innovative</p>
+      <h2 id="beneficios-titulo">More freedom. <span class="gold-text">Less dependence on outlets.</span></h2>
     </div>
 
     <div class="benefit-grid">
       <article class="benefit reveal" data-delay="0">
         <span class="benefit-num" aria-hidden="true">01</span>
         <svg class="icon icon-lg" aria-hidden="true"><use href="#i-sun"/></svg>
-        <h3>Energia renovável</h3>
-        <p>Utiliza a luz solar como fonte de energia para o carregamento.</p>
+        <h3>Renewable energy</h3>
+        <p>Uses sunlight as the energy source for charging.</p>
       </article>
       <article class="benefit reveal" data-delay="80">
         <span class="benefit-num" aria-hidden="true">02</span>
         <svg class="icon icon-lg" aria-hidden="true"><use href="#i-compass"/></svg>
-        <h3>Mobilidade</h3>
-        <p>Pode acompanhar o usuário em diferentes ambientes e atividades.</p>
+        <h3>Mobility</h3>
+        <p>Can go with the user across different environments and activities.</p>
       </article>
       <article class="benefit reveal" data-delay="160">
         <span class="benefit-num" aria-hidden="true">03</span>
         <svg class="icon icon-lg" aria-hidden="true"><use href="#i-bolt"/></svg>
-        <h3>Praticidade</h3>
-        <p>Ajuda a manter dispositivos carregados em locais sem acesso fácil à rede elétrica.</p>
+        <h3>Convenience</h3>
+        <p>Helps keep devices charged in places without easy access to the power grid.</p>
       </article>
       <article class="benefit reveal" data-delay="240">
         <span class="benefit-num" aria-hidden="true">04</span>
         <svg class="icon icon-lg" aria-hidden="true"><use href="#i-plug-off"/></svg>
-        <h3>Autonomia</h3>
-        <p>Oferece uma alternativa de carregamento quando não há uma tomada disponível.</p>
+        <h3>Autonomy</h3>
+        <p>Offers a charging alternative when no outlet is available.</p>
       </article>
       <article class="benefit benefit-wide reveal" data-delay="320">
         <span class="benefit-num" aria-hidden="true">05</span>
         <svg class="icon icon-lg" aria-hidden="true"><use href="#i-leaf"/></svg>
-        <h3>Consciência ambiental</h3>
-        <p>Incentiva o aproveitamento de uma fonte renovável e a adoção de soluções tecnológicas mais sustentáveis.</p>
+        <h3>Environmental awareness</h3>
+        <p>Encourages the use of a renewable source and the adoption of more sustainable technology solutions.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ ENGENHARIA — POR DENTRO DA HÉLIOS ============ -->
+<!-- ============ ENGINEERING — INSIDE HÉLIOS ============ -->
 <section class="section section-alt" id="engenharia" aria-labelledby="eng-titulo">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Engenharia HÉLIOS</p>
-      <h2 id="eng-titulo">Por dentro da <span class="gold-text">HÉLIOS</span></h2>
-      <p class="eng-sub gold-text">Engenharia inteligente. Energia que vem do Sol.</p>
-      <p class="lead">A HÉLIOS combina energia solar, armazenamento de energia e monitoramento inteligente em um carregador portátil projetado para oferecer mais autonomia e praticidade. Seu conceito utiliza componentes eletrônicos acessíveis, com possibilidade de evolução para uma solução comercial.</p>
+      <p class="eyebrow">HÉLIOS engineering</p>
+      <h2 id="eng-titulo">Inside <span class="gold-text">HÉLIOS</span></h2>
+      <p class="eng-sub gold-text">Smart engineering. Energy that comes from the Sun.</p>
+      <p class="lead">HÉLIOS combines solar energy, energy storage and smart monitoring in a portable charger designed to offer more autonomy and convenience. Its concept uses affordable electronic components, with the potential to evolve into a commercial solution.</p>
     </div>
 
-    <!-- 2. Diagrama interativo -->
+    <!-- 2. Interactive diagram -->
     <div class="eng-block reveal" id="eng-diagrama">
       <div class="eng-block-head">
-        <h3>Como a energia flui</h3>
-        <p>Toque ou clique em cada etapa para entender o que ela faz.</p>
+        <h3>How the energy flows</h3>
+        <p>Tap or click each step to understand what it does.</p>
       </div>
 
       <ol class="flow" id="flow">
         <li class="flow-step">
-          <button type="button" class="flow-node" aria-pressed="true" data-tag="Etapa 1 de 6" data-title="Painel solar" data-info="Transforma a luz solar em energia elétrica.">
+          <button type="button" class="flow-node" aria-pressed="true" data-tag="Step 1 of 6" data-title="Solar panel" data-info="Turns sunlight into electrical energy.">
             <span class="flow-num">01</span>
             <svg class="icon icon-lg" aria-hidden="true"><use href="#i-panel"/></svg>
-            <span class="flow-name">Painel solar</span>
-            <span class="flow-short">Luz solar em energia elétrica</span>
+            <span class="flow-name">Solar panel</span>
+            <span class="flow-short">Sunlight into electrical energy</span>
           </button>
           <span class="flow-link" aria-hidden="true"></span>
         </li>
         <li class="flow-step">
-          <button type="button" class="flow-node" aria-pressed="false" data-tag="Etapa 2 de 6" data-title="Controlador de carga" data-info="Gerencia a energia proveniente do painel e a recarga da bateria.">
+          <button type="button" class="flow-node" aria-pressed="false" data-tag="Step 2 of 6" data-title="Charge controller" data-info="Manages the energy coming from the panel and the battery's recharging.">
             <span class="flow-num">02</span>
             <svg class="icon icon-lg" aria-hidden="true"><use href="#i-bolt"/></svg>
-            <span class="flow-name">Controlador de carga</span>
-            <span class="flow-short">Gerencia a energia do painel</span>
+            <span class="flow-name">Charge controller</span>
+            <span class="flow-short">Manages the panel's energy</span>
           </button>
           <span class="flow-link" aria-hidden="true"></span>
         </li>
         <li class="flow-step">
-          <button type="button" class="flow-node" aria-pressed="false" data-tag="Etapa 3 de 6" data-title="Bateria protegida" data-info="Armazena energia para utilização posterior, inclusive quando não há luz solar disponível.">
+          <button type="button" class="flow-node" aria-pressed="false" data-tag="Step 3 of 6" data-title="Protected battery" data-info="Stores energy for later use, including when no sunlight is available.">
             <span class="flow-num">03</span>
             <svg class="icon icon-lg" aria-hidden="true"><use href="#i-battery"/></svg>
-            <span class="flow-name">Bateria protegida</span>
-            <span class="flow-short">Armazena energia para depois</span>
+            <span class="flow-name">Protected battery</span>
+            <span class="flow-short">Stores energy for later</span>
           </button>
           <span class="flow-link" aria-hidden="true"></span>
         </li>
         <li class="flow-step">
-          <button type="button" class="flow-node" aria-pressed="false" data-tag="Etapa 4 de 6" data-title="Conversor de tensão" data-info="Fornece uma alimentação regulada adequada à saída USB.">
+          <button type="button" class="flow-node" aria-pressed="false" data-tag="Step 4 of 6" data-title="Voltage converter" data-info="Provides a regulated supply suitable for the USB output.">
             <span class="flow-num">04</span>
             <svg class="icon icon-lg" aria-hidden="true"><use href="#i-converter"/></svg>
-            <span class="flow-name">Conversor de tensão</span>
-            <span class="flow-short">Alimentação regulada para a USB</span>
+            <span class="flow-name">Voltage converter</span>
+            <span class="flow-short">Regulated power for the USB</span>
           </button>
           <span class="flow-link" aria-hidden="true"></span>
         </li>
         <li class="flow-step">
-          <button type="button" class="flow-node" aria-pressed="false" data-tag="Etapa 5 de 6" data-title="Saída USB-C" data-info="Permite conectar um cabo compatível para carregar dispositivos eletrônicos.">
+          <button type="button" class="flow-node" aria-pressed="false" data-tag="Step 5 of 6" data-title="USB-C output" data-info="Lets you plug in a compatible cable to charge electronic devices.">
             <span class="flow-num">05</span>
             <svg class="icon icon-lg" aria-hidden="true"><use href="#i-usb"/></svg>
-            <span class="flow-name">Saída USB-C</span>
-            <span class="flow-short">Conexão para cabo compatível</span>
+            <span class="flow-name">USB-C output</span>
+            <span class="flow-short">Connection for a compatible cable</span>
           </button>
           <span class="flow-link" aria-hidden="true"></span>
         </li>
         <li class="flow-step">
-          <button type="button" class="flow-node" aria-pressed="false" data-tag="Etapa 6 de 6" data-title="Celular" data-info="O aparelho é conectado por um cabo USB-C compatível. O carregamento depende das especificações do dispositivo e do circuito de saída.">
+          <button type="button" class="flow-node" aria-pressed="false" data-tag="Step 6 of 6" data-title="Phone" data-info="The device is connected by a compatible USB-C cable. Charging depends on the device's specifications and the output circuit.">
             <span class="flow-num">06</span>
             <svg class="icon icon-lg" aria-hidden="true"><use href="#i-phone"/></svg>
-            <span class="flow-name">Celular</span>
-            <span class="flow-short">Dispositivo compatível</span>
+            <span class="flow-name">Phone</span>
+            <span class="flow-short">Compatible device</span>
           </button>
         </li>
       </ol>
 
       <div class="flow-detail" aria-live="polite">
-        <p class="flow-detail-tag" id="flow-detail-tag">Etapa 1 de 6</p>
-        <p class="flow-detail-title" id="flow-detail-title">Painel solar</p>
-        <p class="flow-detail-text" id="flow-detail-text">Transforma a luz solar em energia elétrica.</p>
+        <p class="flow-detail-tag" id="flow-detail-tag">Step 1 of 6</p>
+        <p class="flow-detail-title" id="flow-detail-title">Solar panel</p>
+        <p class="flow-detail-text" id="flow-detail-text">Turns sunlight into electrical energy.</p>
       </div>
 
       <div class="aux">
-        <p class="aux-label">Sistema auxiliar de monitoramento <span>— não fornece energia ao celular</span></p>
+        <p class="aux-label">Auxiliary monitoring system <span>— does not supply power to the phone</span></p>
         <div class="aux-row">
-          <button type="button" class="flow-node aux-node" aria-pressed="false" data-tag="Sistema auxiliar" data-title="Sensor INA219" data-info="Mede tensão e corrente em um circuito compatível, permitindo que o ESP32 obtenha informações de funcionamento.">
+          <button type="button" class="flow-node aux-node" aria-pressed="false" data-tag="Auxiliary system" data-title="INA219 sensor" data-info="Measures voltage and current in a compatible circuit, allowing the ESP32 to obtain operating information.">
             <svg class="icon icon-lg" aria-hidden="true"><use href="#i-gauge"/></svg>
-            <span class="flow-name">Sensor INA219</span>
-            <span class="flow-short">Mede tensão e corrente</span>
+            <span class="flow-name">INA219 sensor</span>
+            <span class="flow-short">Measures voltage and current</span>
           </button>
           <span class="aux-link" aria-hidden="true"></span>
-          <button type="button" class="flow-node aux-node" aria-pressed="false" data-tag="Sistema auxiliar" data-title="ESP32 DevKit V1" data-info="Microcontrolador que recebe as informações dos sensores e as envia ao display. É um sistema auxiliar de monitoramento e não é o componente responsável por fornecer energia ao celular.">
+          <button type="button" class="flow-node aux-node" aria-pressed="false" data-tag="Auxiliary system" data-title="ESP32 DevKit V1" data-info="Microcontroller that receives information from the sensors and sends it to the display. It is an auxiliary monitoring system and is not the component responsible for supplying power to the phone.">
             <svg class="icon icon-lg" aria-hidden="true"><use href="#i-chip"/></svg>
             <span class="flow-name">ESP32</span>
-            <span class="flow-short">Monitoramento inteligente</span>
+            <span class="flow-short">Smart monitoring</span>
           </button>
           <span class="aux-link" aria-hidden="true"></span>
-          <button type="button" class="flow-node aux-node" aria-pressed="false" data-tag="Sistema auxiliar" data-title="Display OLED" data-info="Apresenta informações como o nome HÉLIOS, tensão medida, corrente medida e estado do sistema.">
+          <button type="button" class="flow-node aux-node" aria-pressed="false" data-tag="Auxiliary system" data-title="OLED display" data-info="Shows information such as the HÉLIOS name, measured voltage, measured current and system status.">
             <svg class="icon icon-lg" aria-hidden="true"><use href="#i-display"/></svg>
-            <span class="flow-name">Display OLED</span>
-            <span class="flow-short">Mostra o estado do sistema</span>
+            <span class="flow-name">OLED display</span>
+            <span class="flow-short">Shows the system status</span>
           </button>
         </div>
-        <p class="aux-note">O sensor mede o circuito, o ESP32 lê os dados e o display os apresenta. A energia que chega ao celular passa apenas pela cadeia principal: painel, controlador, bateria, conversor e saída USB-C.</p>
+        <p class="aux-note">The sensor measures the circuit, the ESP32 reads the data and the display presents it. The energy that reaches the phone passes only through the main chain: panel, controller, battery, converter and USB-C output.</p>
       </div>
     </div>
 
-    <!-- 3. Componentes -->
+    <!-- 3. Components -->
     <div class="eng-block" id="eng-componentes">
       <div class="eng-block-head reveal">
-        <h3>Componentes utilizados</h3>
-        <p>Cada módulo tem uma função clara. Todos os itens abaixo são referências de projeto, sujeitas à validação de compatibilidade elétrica.</p>
+        <h3>Components used</h3>
+        <p>Each module has a clear function. All items below are design references, subject to electrical compatibility validation.</p>
       </div>
 
       <div class="comp-grid">
         <article class="card comp-card reveal" data-delay="0">
-          <span class="chip chip-aux">Monitoramento</span>
+          <span class="chip chip-aux">Monitoring</span>
           <h3>ESP32 DevKit V1</h3>
-          <p class="fn">Microcontrolador responsável pelo monitoramento inteligente.</p>
-          <p class="sub-label">Possibilidades</p>
+          <p class="fn">Microcontroller responsible for smart monitoring.</p>
+          <p class="sub-label">Possibilities</p>
           <ul class="dot-list">
-            <li>Receber informações dos sensores.</li>
-            <li>Monitorar tensão e corrente em circuitos compatíveis.</li>
-            <li>Enviar informações para um display OLED.</li>
-            <li>Permitir futuras funcionalidades de conectividade.</li>
+            <li>Receive information from the sensors.</li>
+            <li>Monitor voltage and current in compatible circuits.</li>
+            <li>Send information to an OLED display.</li>
+            <li>Enable future connectivity features.</li>
           </ul>
-          <p class="tech"><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg> Programação: C++ com Arduino IDE.</p>
+          <p class="tech"><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg> Programming: C++ with the Arduino IDE.</p>
         </article>
 
         <article class="card comp-card reveal" data-delay="80">
-          <span class="chip">Energia</span>
-          <h3>Painel solar fotovoltaico</h3>
-          <p class="fn">Converte a luz solar em energia elétrica.</p>
-          <p class="sub-label">Referência inicial</p>
-          <p>Módulo compacto de 6 V e 3–5 W, sujeito à validação de compatibilidade com o circuito de gerenciamento.</p>
-          <p class="small-note">O desempenho depende das condições de iluminação, e a potência do painel precisa ser dimensionada de acordo com a finalidade do produto.</p>
+          <span class="chip">Energy</span>
+          <h3>Photovoltaic solar panel</h3>
+          <p class="fn">Converts sunlight into electrical energy.</p>
+          <p class="sub-label">Initial reference</p>
+          <p>Compact 6 V, 3–5 W module, subject to compatibility validation with the power management circuit.</p>
+          <p class="small-note">Performance depends on lighting conditions, and the panel's power must be sized according to the product's purpose.</p>
         </article>
 
         <article class="card comp-card reveal" data-delay="160">
-          <span class="chip">Energia</span>
-          <h3>Controlador de carga solar</h3>
-          <p class="fn">Gerencia a energia produzida pelo painel e carrega a bateria de maneira apropriada.</p>
-          <p class="small-note">O circuito precisa ser compatível com o painel e com a química, a tensão e a configuração da bateria.</p>
+          <span class="chip">Energy</span>
+          <h3>Solar charge controller</h3>
+          <p class="fn">Manages the energy produced by the panel and charges the battery appropriately.</p>
+          <p class="small-note">The circuit must be compatible with the panel and with the battery's chemistry, voltage and configuration.</p>
         </article>
 
         <article class="card comp-card reveal" data-delay="0">
-          <span class="chip">Energia</span>
-          <h3>Bateria protegida</h3>
-          <p class="fn">Armazena energia para permitir o carregamento do celular mesmo quando não há luz solar disponível.</p>
-          <p>Conjunto de bateria com gerenciamento e proteção adequados.</p>
-          <p class="small-note">A capacidade ainda não foi definida.</p>
+          <span class="chip">Energy</span>
+          <h3>Protected battery</h3>
+          <p class="fn">Stores energy to allow phone charging even when no sunlight is available.</p>
+          <p>Battery pack with appropriate management and protection.</p>
+          <p class="small-note">Capacity has not yet been defined.</p>
         </article>
 
         <article class="card comp-card reveal" data-delay="80">
-          <span class="chip">Energia</span>
-          <h3>Conversor de tensão e saída USB</h3>
-          <p class="fn">Fornece alimentação regulada para a saída USB.</p>
-          <p class="small-note">A saída precisa ser compatível com a bateria, a corrente necessária e as especificações do dispositivo conectado. Carregamento rápido não é prometido: dependeria de implementar e validar os protocolos necessários.</p>
+          <span class="chip">Energy</span>
+          <h3>Voltage converter and USB output</h3>
+          <p class="fn">Provides regulated power for the USB output.</p>
+          <p class="small-note">The output must be compatible with the battery, the required current and the specifications of the connected device. Fast charging is not promised: it would depend on implementing and validating the necessary protocols.</p>
         </article>
 
         <article class="card comp-card reveal" data-delay="160">
-          <span class="chip chip-aux">Monitoramento</span>
-          <h3>Sensor INA219</h3>
-          <p class="fn">Mede tensão e corrente em um circuito compatível, permitindo que o ESP32 obtenha informações de funcionamento.</p>
+          <span class="chip chip-aux">Monitoring</span>
+          <h3>INA219 sensor</h3>
+          <p class="fn">Measures voltage and current in a compatible circuit, allowing the ESP32 to obtain operating information.</p>
         </article>
 
         <article class="card comp-card reveal" data-delay="0">
-          <span class="chip chip-aux">Monitoramento</span>
-          <h3>Display OLED de 0,96 polegada</h3>
-          <p class="fn">Apresenta informações como o nome HÉLIOS, tensão medida, corrente medida e estado do sistema.</p>
+          <span class="chip chip-aux">Monitoring</span>
+          <h3>0.96-inch OLED display</h3>
+          <p class="fn">Shows information such as the HÉLIOS name, measured voltage, measured current and system status.</p>
         </article>
 
         <article class="card comp-card reveal" data-delay="80">
-          <span class="chip chip-base">Estrutura</span>
-          <h3>Cabos e conectores</h3>
+          <span class="chip chip-base">Structure</span>
+          <h3>Cables and connectors</h3>
           <ul class="dot-list">
-            <li>Cabo USB-C compatível com o dispositivo.</li>
-            <li>Fios flexíveis para eletrônica.</li>
-            <li>Conectores adequados aos módulos.</li>
-            <li>Botão liga/desliga.</li>
-            <li>Isolamento elétrico apropriado.</li>
+            <li>USB-C cable compatible with the device.</li>
+            <li>Flexible wires for electronics.</li>
+            <li>Connectors suited to the modules.</li>
+            <li>Power button.</li>
+            <li>Appropriate electrical insulation.</li>
           </ul>
         </article>
 
         <article class="card comp-card reveal" data-delay="160">
-          <span class="chip chip-base">Estrutura</span>
-          <h3>Carcaça personalizada</h3>
-          <p class="fn">Para o protótipo: plástico produzido por impressão 3D ou uma caixa apropriada para eletrônica.</p>
-          <p class="sub-label">Aparência</p>
+          <span class="chip chip-base">Structure</span>
+          <h3>Custom casing</h3>
+          <p class="fn">For the prototype: plastic made by 3D printing or a suitable electronics enclosure.</p>
+          <p class="sub-label">Appearance</p>
           <ul class="dot-list">
-            <li>Preto fosco.</li>
-            <li>Logotipo HÉLIOS em dourado.</li>
-            <li>Bordas discretamente arredondadas.</li>
-            <li>Painel solar exposto à luz.</li>
-            <li>Aberturas planejadas para USB-C, display e botão.</li>
+            <li>Matte black.</li>
+            <li>Gold HÉLIOS logo.</li>
+            <li>Subtly rounded edges.</li>
+            <li>Solar panel exposed to the light.</li>
+            <li>Planned openings for USB-C, display and button.</li>
           </ul>
-          <p class="small-note">Resistência à água ou a impactos dependem de testes específicos e não são declaradas.</p>
+          <p class="small-note">Water or impact resistance depends on specific testing and is not claimed.</p>
         </article>
       </div>
     </div>
 
-    <!-- 4. Visualização conceitual -->
+    <!-- 4. Conceptual visualization -->
     <div class="eng-block" id="eng-visualizacao">
       <div class="eng-block-head reveal">
-        <h3>O aparelho por fora e por dentro</h3>
-        <p>Uma composição conceitual para entender a proposta do protótipo.</p>
+        <h3>The device inside and out</h3>
+        <p>A conceptual composition to help understand the prototype proposal.</p>
       </div>
 
       <div class="concept">
         <figure class="concept-fig reveal">
-          <p class="fig-label">Por fora</p>
-          <svg viewBox="0 0 360 260" role="img" aria-label="Ilustração conceitual do exterior: carregador portátil preto com dois painéis solares, display OLED, logotipo HÉLIOS dourado, botão e porta USB-C">
+          <p class="fig-label">Outside</p>
+          <svg viewBox="0 0 360 260" role="img" aria-label="Conceptual illustration of the exterior: black portable charger with two solar panels, OLED display, golden HÉLIOS logo, button and USB-C port">
             <ellipse cx="180" cy="130" rx="150" ry="110" fill="#D8AD62" opacity=".05"/>
             <rect class="sv-body" x="40" y="40" width="280" height="180" rx="22"/>
             <rect x="46" y="46" width="268" height="168" rx="18" fill="none" stroke="#D8AD62" stroke-opacity=".14"/>
@@ -500,16 +500,16 @@
             <rect x="319" y="100" width="9" height="26" rx="4.5" fill="#050403" stroke="#D8AD62" stroke-opacity=".7"/>
 
             <g class="sv-lead"><path d="M115 58V34M245 58V34M92 202V226M282 195V226M328 113h4"/></g>
-            <text class="sv-lab" x="180" y="28" text-anchor="middle">Painel solar</text>
-            <text class="sv-lab" x="92" y="238" text-anchor="middle">Display OLED</text>
-            <text class="sv-lab" x="282" y="238" text-anchor="middle">Botão liga/desliga</text>
+            <text class="sv-lab" x="180" y="28" text-anchor="middle">Solar panel</text>
+            <text class="sv-lab" x="92" y="238" text-anchor="middle">OLED display</text>
+            <text class="sv-lab" x="282" y="238" text-anchor="middle">Power button</text>
             <text class="sv-lab" x="334" y="116">USB-C</text>
           </svg>
         </figure>
 
         <figure class="concept-fig reveal" data-delay="120">
-          <p class="fig-label">Por dentro</p>
-          <svg viewBox="0 0 360 260" role="img" aria-label="Esquema técnico conceitual: painel solar, controlador de carga, bateria protegida, conversor de tensão e saída USB-C em sequência; ESP32 ligado ao sensor INA219 e ao display OLED como sistema auxiliar de monitoramento">
+          <p class="fig-label">Inside</p>
+          <svg viewBox="0 0 360 260" role="img" aria-label="Conceptual technical diagram: solar panel, charge controller, protected battery, voltage converter and USB-C output in sequence; ESP32 connected to the INA219 sensor and the OLED display as an auxiliary monitoring system">
             <defs>
               <marker id="sv-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L6 3L0 6z" fill="#D8AD62"/></marker>
             </defs>
@@ -517,22 +517,22 @@
             <rect class="sv-aux" x="10" y="18" width="76" height="40" rx="6"/>
             <text class="sv-t" x="48" y="35">INA219</text><text class="sv-tg" x="48" y="47">sensor</text>
             <rect class="sv-esp" x="114" y="12" width="132" height="52" rx="8"/>
-            <text class="sv-t" x="180" y="30">ESP32</text><text class="sv-tg" x="180" y="42">monitoramento</text><text class="sv-tg sv-tiny" x="180" y="55">não alimenta o celular</text>
+            <text class="sv-t" x="180" y="30">ESP32</text><text class="sv-tg" x="180" y="42">monitoring</text><text class="sv-tg sv-tiny" x="180" y="55">does not power the phone</text>
             <rect class="sv-aux" x="274" y="18" width="76" height="40" rx="6"/>
-            <text class="sv-t" x="312" y="35">Display</text><text class="sv-tg" x="312" y="47">OLED</text>
+            <text class="sv-t" x="312" y="35">OLED</text><text class="sv-tg" x="312" y="47">display</text>
             <path class="sv-dash" d="M86 38H114M246 38H274"/>
             <path class="sv-dash sv-dot" d="M48 58V129"/>
             <circle cx="48" cy="129" r="2.6" fill="#AAA39A"/>
-            <text class="sv-tg sv-tiny sv-start" x="54" y="98">medição</text>
+            <text class="sv-tg sv-tiny sv-start" x="54" y="98">measurement</text>
 
             <rect class="sv-block" x="10" y="130" width="76" height="40" rx="6"/>
-            <text class="sv-t" x="48" y="147">Controlador</text><text class="sv-tg" x="48" y="159">de carga</text>
+            <text class="sv-t" x="48" y="147">Charge</text><text class="sv-tg" x="48" y="159">controller</text>
             <rect class="sv-block" x="100" y="130" width="76" height="40" rx="6"/>
-            <text class="sv-t" x="138" y="147">Bateria</text><text class="sv-tg" x="138" y="159">protegida</text>
+            <text class="sv-t" x="138" y="147">Protected</text><text class="sv-tg" x="138" y="159">battery</text>
             <rect class="sv-block" x="190" y="130" width="76" height="40" rx="6"/>
-            <text class="sv-t" x="228" y="147">Conversor</text><text class="sv-tg" x="228" y="159">de tensão</text>
+            <text class="sv-t" x="228" y="147">Voltage</text><text class="sv-tg" x="228" y="159">converter</text>
             <rect class="sv-block" x="280" y="130" width="76" height="40" rx="6"/>
-            <text class="sv-t" x="318" y="147">Saída</text><text class="sv-tg" x="318" y="159">USB-C</text>
+            <text class="sv-t" x="318" y="147">USB-C</text><text class="sv-tg" x="318" y="159">output</text>
 
             <g class="sv-flow" fill="none" stroke="#D8AD62" stroke-width="1.6" marker-end="url(#sv-arrow)">
               <path d="M86 150H99" marker-end="url(#sv-arrow)"/>
@@ -543,198 +543,198 @@
             </g>
 
             <rect class="sv-block" x="10" y="205" width="76" height="34" rx="6"/>
-            <text class="sv-t" x="48" y="226">Painel solar</text>
+            <text class="sv-t" x="48" y="226">Solar panel</text>
             <rect class="sv-aux sv-solid" x="280" y="205" width="76" height="34" rx="6"/>
-            <text class="sv-t" x="318" y="219">Celular</text><text class="sv-tg sv-tiny" x="318" y="231">via cabo USB-C</text>
+            <text class="sv-t" x="318" y="219">Phone</text><text class="sv-tg sv-tiny" x="318" y="231">via USB-C cable</text>
           </svg>
         </figure>
       </div>
-      <p class="concept-cap reveal">Representação conceitual do protótipo HÉLIOS. A disposição final dos componentes depende da montagem e dos testes de engenharia.</p>
+      <p class="concept-cap reveal">Conceptual representation of the HÉLIOS prototype. The final arrangement of the components depends on assembly and engineering tests.</p>
     </div>
 
     <!-- 5. HÉLIOS Smart -->
     <div class="eng-block" id="eng-smart">
       <div class="eng-block-head reveal">
-        <h3>Interface inteligente <span class="gold-text">HÉLIOS Smart</span></h3>
-        <p>Uma simulação visual de como o display OLED poderia apresentar o estado do sistema.</p>
+        <h3>Smart interface <span class="gold-text">HÉLIOS Smart</span></h3>
+        <p>A visual simulation of how the OLED display could show the system status.</p>
       </div>
 
       <div class="oled-wrap reveal">
         <div class="oled-device">
-          <span class="oled-badge">Simulação visual · valores ilustrativos</span>
+          <span class="oled-badge">Visual simulation · illustrative values</span>
           <div class="oled-bezel">
-            <div class="oled-screen" role="img" aria-label="Simulação de tela OLED mostrando HÉLIOS, SOLAR POWER, tensão 5,0 V, corrente 0,8 A e status monitoramento ativo. Valores ilustrativos, sem conexão com sensores.">
+            <div class="oled-screen" role="img" aria-label="Simulation of an OLED screen showing HÉLIOS, SOLAR POWER, voltage 5.0 V, current 0.8 A and status monitoring active. Illustrative values, with no sensor connection.">
               <p class="o-brand">HÉLIOS</p>
               <p class="o-sub">SOLAR POWER</p>
               <hr class="o-rule">
-              <p class="o-line">Tensão: 5,0 V</p>
-              <p class="o-line">Corrente: 0,8 A</p>
-              <p class="o-line o-status"><i class="o-dot"></i>Status: Monitoramento ativo</p>
+              <p class="o-line">Voltage: 5.0 V</p>
+              <p class="o-line">Current: 0.8 A</p>
+              <p class="o-line o-status"><i class="o-dot"></i>Status: Monitoring active</p>
             </div>
           </div>
           <div class="oled-pins" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         </div>
 
-        <p class="oled-text">Com o ESP32 e sensores compatíveis, a HÉLIOS poderá monitorar parâmetros elétricos e apresentar informações sobre o funcionamento do carregador. Essa funcionalidade faz parte da proposta de evolução inteligente do produto.</p>
-        <p class="small-note oled-note">Esta tela é uma simulação visual, sem conexão real com sensores. Tensão e corrente exibidas são apenas valores ilustrativos e não representam medições de um aparelho existente.</p>
+        <p class="oled-text">With the ESP32 and compatible sensors, HÉLIOS will be able to monitor electrical parameters and display information about how the charger is working. This feature is part of the product's smart evolution proposal.</p>
+        <p class="small-note oled-note">This screen is a visual simulation, with no real sensor connection. The voltage and current shown are illustrative values only and do not represent measurements from an existing device.</p>
       </div>
     </div>
 
-    <!-- 6. Custo -->
+    <!-- 6. Cost -->
     <div class="eng-block" id="eng-custo">
       <div class="eng-block-head reveal">
-        <h3>Estimativa de custo do protótipo</h3>
-        <p>Valores de referência para planejamento.</p>
+        <h3>Estimated prototype cost</h3>
+        <p>Reference values for planning.</p>
       </div>
 
       <div class="cost-card reveal">
         <table class="cost-table">
-          <caption class="sr-only">Estimativa de custo por componente do protótipo</caption>
+          <caption class="sr-only">Estimated cost per prototype component</caption>
           <thead>
             <tr>
-              <th scope="col">Componente</th>
-              <th scope="col" class="price-h">Custo estimado</th>
-              <th scope="col" class="range-col" aria-hidden="true">Faixa (escala R$ 0–100)</th>
+              <th scope="col">Component</th>
+              <th scope="col" class="price-h">Estimated cost</th>
+              <th scope="col" class="range-col" aria-hidden="true">Range (R$ 0–100 scale)</th>
             </tr>
           </thead>
           <tbody>
             <tr><th scope="row">ESP32 DevKit V1</th><td class="price">R$ 25–60</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:25;--max:60"></i></span></td></tr>
-            <tr><th scope="row">Painel solar</th><td class="price">R$ 30–100</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:30;--max:100"></i></span></td></tr>
-            <tr><th scope="row">Gerenciamento de energia</th><td class="price">R$ 30–100</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:30;--max:100"></i></span></td></tr>
-            <tr><th scope="row">Bateria protegida ou conjunto de power bank</th><td class="price">R$ 40–100</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:40;--max:100"></i></span></td></tr>
-            <tr><th scope="row">Sensor INA219</th><td class="price">R$ 15–30</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:15;--max:30"></i></span></td></tr>
-            <tr><th scope="row">Display OLED</th><td class="price">R$ 25–45</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:25;--max:45"></i></span></td></tr>
-            <tr><th scope="row">Cabos, conectores e botão</th><td class="price">R$ 20–50</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:20;--max:50"></i></span></td></tr>
-            <tr><th scope="row">Carcaça e acabamento</th><td class="price">R$ 20–80</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:20;--max:80"></i></span></td></tr>
+            <tr><th scope="row">Solar panel</th><td class="price">R$ 30–100</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:30;--max:100"></i></span></td></tr>
+            <tr><th scope="row">Power management</th><td class="price">R$ 30–100</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:30;--max:100"></i></span></td></tr>
+            <tr><th scope="row">Protected battery or power bank pack</th><td class="price">R$ 40–100</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:40;--max:100"></i></span></td></tr>
+            <tr><th scope="row">INA219 sensor</th><td class="price">R$ 15–30</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:15;--max:30"></i></span></td></tr>
+            <tr><th scope="row">OLED display</th><td class="price">R$ 25–45</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:25;--max:45"></i></span></td></tr>
+            <tr><th scope="row">Cables, connectors and button</th><td class="price">R$ 20–50</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:20;--max:50"></i></span></td></tr>
+            <tr><th scope="row">Casing and finish</th><td class="price">R$ 20–80</td><td class="range-col" aria-hidden="true"><span class="range"><i style="--min:20;--max:80"></i></span></td></tr>
           </tbody>
         </table>
-        <p class="cost-total">Orçamento preliminar estimado: <strong class="gold-text">R$ 205 a R$ 565.</strong></p>
+        <p class="cost-total">Estimated preliminary budget: <strong class="gold-text">R$ 205 to R$ 565.</strong></p>
       </div>
 
       <div class="cost-notes reveal">
         <p class="notice"><svg class="icon" aria-hidden="true"><use href="#i-warn"/></svg>
-          <span>Trata-se de uma estimativa de planejamento, sujeita a preços de fornecedores, frete, ferramentas, componentes adicionais e validação da compatibilidade elétrica. O valor não representa uma cotação atual nem o custo definitivo de fabricação.</span></p>
+          <span>This is a planning estimate, subject to supplier prices, shipping, tools, additional components and validation of electrical compatibility. The amount does not represent a current quote or the final manufacturing cost.</span></p>
         <p class="notice"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>
-          <span>Este orçamento é para um <strong>protótipo</strong> e não deve ser confundido com o investimento empresarial de R$ 150.000 apresentado no plano financeiro da HÉLIOS.</span></p>
+          <span>This budget is for a <strong>prototype</strong> and should not be confused with the business investment of R$ 150,000 presented in HÉLIOS's financial plan.</span></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ DIFERENCIAL TECNOLÓGICO E LIMITAÇÕES ============ -->
+<!-- ============ TECHNOLOGICAL DIFFERENTIATOR AND LIMITATIONS ============ -->
 <section class="section" id="plataforma" aria-labelledby="plat-titulo">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Diferencial tecnológico</p>
-      <h2 id="plat-titulo">Mais do que um carregador. <span class="gold-text">Uma plataforma inteligente.</span></h2>
+      <p class="eyebrow">Technological differentiator</p>
+      <h2 id="plat-titulo">More than a charger. <span class="gold-text">A smart platform.</span></h2>
     </div>
 
     <div class="diff-grid">
       <article class="diff reveal" data-delay="0">
         <div class="diff-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-sun"/></svg></div>
-        <h3>Energia renovável</h3>
-        <p>Aproveitamento da luz solar para geração de energia elétrica.</p>
+        <h3>Renewable energy</h3>
+        <p>Harnessing sunlight to generate electrical energy.</p>
       </article>
       <article class="diff reveal" data-delay="100">
         <div class="diff-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-gauge"/></svg></div>
-        <h3>Monitoramento inteligente</h3>
-        <p>Possibilidade de acompanhar parâmetros elétricos com ESP32 e sensores.</p>
+        <h3>Smart monitoring</h3>
+        <p>The ability to track electrical parameters with the ESP32 and sensors.</p>
       </article>
       <article class="diff reveal" data-delay="200">
         <div class="diff-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-layers"/></svg></div>
-        <h3>Evolução tecnológica</h3>
-        <p>Possibilidade de desenvolver versões futuras com melhorias de monitoramento e eficiência.</p>
+        <h3>Technological evolution</h3>
+        <p>The possibility of developing future versions with improved monitoring and efficiency.</p>
       </article>
     </div>
 
-    <p class="quote reveal">A HÉLIOS une uma solução prática para o cotidiano a uma proposta de inovação tecnológica sustentável.</p>
+    <p class="quote reveal">HÉLIOS combines a practical everyday solution with a proposal for sustainable technological innovation.</p>
 
     <aside class="safety reveal" aria-labelledby="seg-titulo">
       <svg class="icon" aria-hidden="true"><use href="#i-warn"/></svg>
       <div>
-        <p class="safety-title" id="seg-titulo">Nota técnica: segurança e limitações</p>
+        <p class="safety-title" id="seg-titulo">Technical note: safety and limitations</p>
         <ul class="dot-list">
-          <li>A montagem real exige compatibilidade entre painel, controlador, bateria e saída USB.</li>
-          <li>Não conecte diretamente o painel solar a uma bateria de lítio ou ao celular. O conjunto deve possuir gerenciamento e proteção apropriados, e a montagem e os testes precisam ser supervisionados por alguém com experiência em eletrônica.</li>
-          <li>A HÉLIOS ainda é uma proposta de protótipo, e não um produto certificado ou comercialmente validado.</li>
+          <li>A real assembly requires compatibility between the panel, controller, battery and USB output.</li>
+          <li>Do not connect the solar panel directly to a lithium battery or to the phone. The assembly must have appropriate management and protection, and assembly and testing must be supervised by someone with electronics experience.</li>
+          <li>HÉLIOS is still a prototype proposal, not a certified or commercially validated product.</li>
         </ul>
       </div>
     </aside>
   </div>
 </section>
 
-<!-- ============ SEÇÃO 6 — MERCADO ============ -->
+<!-- ============ SECTION 6 — MARKET ============ -->
 <section class="section section-alt" id="mercado" aria-labelledby="mercado-titulo">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Público-alvo e oportunidade</p>
-      <h2 id="mercado-titulo">Energia para acompanhar <span class="gold-text">cada jornada.</span></h2>
-      <p class="lead">A dependência de celulares e outros dispositivos eletrônicos cresce constantemente. Nesse cenário, soluções portáteis de carregamento podem atender consumidores que precisam de praticidade e autonomia em diferentes situações.</p>
+      <p class="eyebrow">Target audience and opportunity</p>
+      <h2 id="mercado-titulo">Energy to go along with <span class="gold-text">every journey.</span></h2>
+      <p class="lead">Reliance on phones and other electronic devices keeps growing. In this scenario, portable charging solutions can serve consumers who need convenience and autonomy in different situations.</p>
     </div>
 
     <div class="audience-grid">
       <article class="card audience reveal" data-delay="0">
         <svg class="icon icon-lg" aria-hidden="true"><use href="#i-book"/></svg>
-        <h3>Estudantes</h3>
-        <p>Pessoas que utilizam celulares e dispositivos eletrônicos durante a rotina.</p>
+        <h3>Students</h3>
+        <p>People who use phones and electronic devices throughout their daily routine.</p>
       </article>
       <article class="card audience reveal" data-delay="80">
         <svg class="icon icon-lg" aria-hidden="true"><use href="#i-plane"/></svg>
-        <h3>Viajantes</h3>
-        <p>Consumidores que precisam de alternativas de carregamento durante deslocamentos.</p>
+        <h3>Travelers</h3>
+        <p>Consumers who need charging alternatives while on the move.</p>
       </article>
       <article class="card audience reveal" data-delay="160">
         <svg class="icon icon-lg" aria-hidden="true"><use href="#i-mount"/></svg>
-        <h3>Aventureiros</h3>
-        <p>Pessoas que praticam camping, trilhas e atividades ao ar livre.</p>
+        <h3>Adventurers</h3>
+        <p>People who go camping, hiking and enjoy outdoor activities.</p>
       </article>
       <article class="card audience reveal" data-delay="240">
         <svg class="icon icon-lg" aria-hidden="true"><use href="#i-globe"/></svg>
-        <h3>Consumidores conscientes</h3>
-        <p>Pessoas interessadas em produtos que aproveitam fontes renováveis de energia.</p>
+        <h3>Conscious consumers</h3>
+        <p>People interested in products that use renewable energy sources.</p>
       </article>
     </div>
 
-    <p class="quote reveal">A HÉLIOS conecta uma necessidade cotidiana a uma oportunidade de inovação sustentável.</p>
+    <p class="quote reveal">HÉLIOS connects an everyday need to an opportunity for sustainable innovation.</p>
   </div>
 </section>
 
-<!-- ============ SEÇÃO 7 — INVESTIMENTO ============ -->
+<!-- ============ SECTION 7 — INVESTMENT ============ -->
 <section class="section" id="investimento" aria-labelledby="invest-titulo">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Plano financeiro</p>
-      <h2 id="invest-titulo">Uma ideia com <span class="gold-text">potencial de crescimento.</span></h2>
-      <p class="disclaimer">Todos os valores abaixo são <strong>projeções do plano de negócios</strong> — estimativas, e não resultados alcançados ou garantidos.</p>
+      <p class="eyebrow">Financial plan</p>
+      <h2 id="invest-titulo">An idea with <span class="gold-text">growth potential.</span></h2>
+      <p class="disclaimer">All values below are <strong>business plan projections</strong> — estimates, not achieved or guaranteed results.</p>
     </div>
 
-    <!-- Investimento inicial + gráfico -->
+    <!-- Initial investment + chart -->
     <div class="finance-top">
       <div class="invest-total reveal">
-        <p class="label">Investimento inicial</p>
-        <p class="big-number"><span class="currency">R$</span> <span data-count="150000">150.000</span></p>
-        <p class="muted">Preço de venda estimado: <strong class="gold-text">R$ 199 por unidade</strong></p>
+        <p class="label">Initial investment</p>
+        <p class="big-number"><span class="currency">R$</span> <span data-count="150000">150,000</span></p>
+        <p class="muted">Estimated selling price: <strong class="gold-text">R$ 199 per unit</strong></p>
 
         <div class="indicators">
           <div class="indicator">
-            <span class="ind-value">8 <small>meses</small></span>
-            <span class="ind-label">Ponto de equilíbrio estimado</span>
+            <span class="ind-value">8 <small>months</small></span>
+            <span class="ind-label">Estimated break-even point</span>
           </div>
           <div class="indicator">
-            <span class="ind-value">18 <small>meses</small></span>
-            <span class="ind-label">Prazo estimado para recuperar o investimento inicial</span>
+            <span class="ind-value">18 <small>months</small></span>
+            <span class="ind-label">Estimated time to recover the initial investment</span>
           </div>
         </div>
       </div>
 
       <div class="chart-card reveal" data-delay="120">
-        <h3 class="chart-title">Distribuição do investimento</h3>
+        <h3 class="chart-title">Investment breakdown</h3>
         <div class="donut-wrap">
-          <div class="donut" id="donut" role="img" aria-label="Gráfico de rosca com a distribuição dos R$ 150.000 de investimento inicial">
+          <div class="donut" id="donut" role="img" aria-label="Donut chart showing the breakdown of the R$ 150,000 initial investment">
             <svg viewBox="0 0 200 200" aria-hidden="true"></svg>
             <div class="donut-center">
               <span class="donut-center-label" id="donut-label">Total</span>
-              <span class="donut-center-value" id="donut-value">R$ 150.000</span>
+              <span class="donut-center-value" id="donut-value">R$ 150,000</span>
               <span class="donut-center-pct" id="donut-pct">100%</span>
             </div>
           </div>
@@ -743,95 +743,95 @@
       </div>
     </div>
 
-    <!-- Projeções anuais -->
-    <h3 class="sub-title reveal">Projeções anuais <span class="muted">(estimativas)</span></h3>
+    <!-- Annual projections -->
+    <h3 class="sub-title reveal">Annual projections <span class="muted">(estimates)</span></h3>
     <div class="year-grid">
       <article class="card year reveal" data-delay="0">
-        <p class="year-tag">ANO 1</p>
+        <p class="year-tag">YEAR 1</p>
         <dl>
-          <div><dt>Vendas estimadas</dt><dd>1.200 unidades</dd></div>
-          <div><dt>Faturamento bruto</dt><dd>R$ 240.000</dd></div>
-          <div><dt>Lucro líquido estimado</dt><dd>R$ 24.000</dd></div>
-          <div><dt>Margem líquida</dt><dd class="gold-text">10%</dd></div>
+          <div><dt>Estimated sales</dt><dd>1,200 units</dd></div>
+          <div><dt>Gross revenue</dt><dd>R$ 240,000</dd></div>
+          <div><dt>Estimated net profit</dt><dd>R$ 24,000</dd></div>
+          <div><dt>Net margin</dt><dd class="gold-text">10%</dd></div>
         </dl>
       </article>
       <article class="card year reveal" data-delay="100">
-        <p class="year-tag">ANO 2</p>
+        <p class="year-tag">YEAR 2</p>
         <dl>
-          <div><dt>Vendas estimadas</dt><dd>3.000 unidades</dd></div>
-          <div><dt>Faturamento bruto</dt><dd>R$ 600.000</dd></div>
-          <div><dt>Lucro líquido estimado</dt><dd>R$ 150.000</dd></div>
-          <div><dt>Margem líquida</dt><dd class="gold-text">25%</dd></div>
+          <div><dt>Estimated sales</dt><dd>3,000 units</dd></div>
+          <div><dt>Gross revenue</dt><dd>R$ 600,000</dd></div>
+          <div><dt>Estimated net profit</dt><dd>R$ 150,000</dd></div>
+          <div><dt>Net margin</dt><dd class="gold-text">25%</dd></div>
         </dl>
       </article>
       <article class="card year year-featured reveal" data-delay="200">
-        <p class="year-tag">ANO 3</p>
+        <p class="year-tag">YEAR 3</p>
         <dl>
-          <div><dt>Vendas estimadas</dt><dd>6.000 unidades</dd></div>
-          <div><dt>Faturamento bruto</dt><dd>R$ 1.200.000</dd></div>
-          <div><dt>Lucro líquido estimado</dt><dd>R$ 360.000</dd></div>
-          <div><dt>Margem líquida</dt><dd class="gold-text">30%</dd></div>
+          <div><dt>Estimated sales</dt><dd>6,000 units</dd></div>
+          <div><dt>Gross revenue</dt><dd>R$ 1,200,000</dd></div>
+          <div><dt>Estimated net profit</dt><dd>R$ 360,000</dd></div>
+          <div><dt>Net margin</dt><dd class="gold-text">30%</dd></div>
         </dl>
       </article>
     </div>
 
-    <!-- Linha do tempo -->
+    <!-- Timeline -->
     <div class="timeline-card reveal">
-      <h3 class="chart-title">Crescimento projetado em 3 anos</h3>
+      <h3 class="chart-title">Projected growth over 3 years</h3>
       <div class="timeline" id="timeline">
         <div class="tl-col" data-value="240000" data-max="1200000">
-          <span class="tl-money">R$ 240 mil</span>
+          <span class="tl-money">R$ 240K</span>
           <div class="tl-bar-wrap"><div class="tl-bar"></div></div>
-          <span class="tl-year">Ano 1</span>
-          <span class="tl-sub">1.200 un.</span>
+          <span class="tl-year">Year 1</span>
+          <span class="tl-sub">1,200 units</span>
         </div>
         <div class="tl-col" data-value="600000" data-max="1200000">
-          <span class="tl-money">R$ 600 mil</span>
+          <span class="tl-money">R$ 600K</span>
           <div class="tl-bar-wrap"><div class="tl-bar"></div></div>
-          <span class="tl-year">Ano 2</span>
-          <span class="tl-sub">3.000 un.</span>
+          <span class="tl-year">Year 2</span>
+          <span class="tl-sub">3,000 units</span>
         </div>
         <div class="tl-col" data-value="1200000" data-max="1200000">
-          <span class="tl-money">R$ 1,2 milhão</span>
+          <span class="tl-money">R$ 1.2 million</span>
           <div class="tl-bar-wrap"><div class="tl-bar"></div></div>
-          <span class="tl-year">Ano 3</span>
-          <span class="tl-sub">6.000 un.</span>
+          <span class="tl-year">Year 3</span>
+          <span class="tl-sub">6,000 units</span>
         </div>
       </div>
-      <p class="muted small">Faturamento bruto estimado por ano. Projeção do plano de negócios.</p>
+      <p class="muted small">Estimated gross revenue per year. Business plan projection.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ SEÇÃO 8 — DIFERENCIAIS ============ -->
+<!-- ============ SECTION 8 — DIFFERENTIATORS ============ -->
 <section class="section section-alt" id="diferenciais" aria-labelledby="dif-titulo">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Diferenciais da HÉLIOS</p>
-      <h2 id="dif-titulo">Não é apenas carregar. <span class="gold-text">É ampliar possibilidades.</span></h2>
+      <p class="eyebrow">HÉLIOS differentiators</p>
+      <h2 id="dif-titulo">It's not just charging. <span class="gold-text">It's expanding possibilities.</span></h2>
     </div>
 
     <div class="diff-grid">
       <article class="diff reveal" data-delay="0">
         <div class="diff-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-target"/></svg></div>
-        <h3>Propósito</h3>
-        <p>Aproximar a tecnologia de soluções sustentáveis.</p>
+        <h3>Purpose</h3>
+        <p>Bringing technology closer to sustainable solutions.</p>
       </article>
       <article class="diff reveal" data-delay="100">
         <div class="diff-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-layers"/></svg></div>
-        <h3>Versatilidade</h3>
-        <p>Atender diferentes perfis de consumidores e situações de uso.</p>
+        <h3>Versatility</h3>
+        <p>Serving different consumer profiles and usage situations.</p>
       </article>
       <article class="diff reveal" data-delay="200">
         <div class="diff-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-expand"/></svg></div>
-        <h3>Potencial de expansão</h3>
-        <p>Possibilidade de alcançar novos públicos e desenvolver futuras versões do produto.</p>
+        <h3>Expansion potential</h3>
+        <p>The possibility of reaching new audiences and developing future versions of the product.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ SEÇÃO 9 — ENCERRAMENTO ============ -->
+<!-- ============ SECTION 9 — CLOSING ============ -->
 <section class="closing" id="encerramento" aria-labelledby="enc-titulo">
   <div class="closing-sun" aria-hidden="true">
     <svg viewBox="0 0 400 400"><g fill="none" stroke="#D8AD62">
@@ -843,45 +843,45 @@
     </g></svg>
   </div>
   <div class="container closing-inner reveal">
-    <h2 id="enc-titulo">O futuro também pode ser <span class="gold-text">movido a Sol.</span></h2>
-    <p class="lead">A HÉLIOS acredita que pequenas inovações podem abrir caminho para grandes transformações. Nossa proposta é levar energia, mobilidade e sustentabilidade cada vez mais longe.</p>
-    <a href="#inicio" class="btn btn-gold" id="voltar-inicio">Voltar ao início</a>
-    <p class="closing-sign"><strong>HÉLIOS</strong> — Energia que acompanha você.</p>
+    <h2 id="enc-titulo">The future can also be <span class="gold-text">powered by the Sun.</span></h2>
+    <p class="lead">HÉLIOS believes that small innovations can pave the way for great transformations. Our proposal is to take energy, mobility and sustainability further and further.</p>
+    <a href="#inicio" class="btn btn-gold" id="voltar-inicio">Back to top</a>
+    <p class="closing-sign"><strong>HÉLIOS</strong> — Energy that goes with you.</p>
   </div>
 </section>
 
 </main>
 
-<!-- ============ SEÇÃO 10 — RODAPÉ ============ -->
+<!-- ============ SECTION 10 — FOOTER ============ -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href="#inicio" class="brand" aria-label="HÉLIOS — ir para o início">
+      <a href="#inicio" class="brand" aria-label="HÉLIOS — go to the top">
         <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
         <span class="brand-name">HÉLIOS</span>
       </a>
-      <p>Energia que acompanha você.</p>
+      <p>Energy that goes with you.</p>
     </div>
 
-    <nav aria-label="Links do rodapé">
+    <nav aria-label="Footer links">
       <ul class="footer-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#produto">Produto</a></li>
-        <li><a href="#beneficios">Benefícios</a></li>
-        <li><a href="#engenharia">Engenharia</a></li>
-        <li><a href="#mercado">Mercado</a></li>
-        <li><a href="#investimento">Investimento</a></li>
-        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#sobre">About</a></li>
+        <li><a href="#produto">Product</a></li>
+        <li><a href="#beneficios">Benefits</a></li>
+        <li><a href="#engenharia">Engineering</a></li>
+        <li><a href="#mercado">Market</a></li>
+        <li><a href="#investimento">Investment</a></li>
+        <li><a href="#diferenciais">Differentiators</a></li>
       </ul>
     </nav>
   </div>
   <div class="container footer-bottom">
-    <p>Projeto acadêmico fictício desenvolvido para fins educacionais.</p>
+    <p>Fictional academic project developed for educational purposes.</p>
     <p>© 2026 HÉLIOS</p>
   </div>
 </footer>
 
-<button class="to-top" type="button" id="to-top" aria-label="Voltar ao topo">
+<button class="to-top" type="button" id="to-top" aria-label="Back to top">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
 
