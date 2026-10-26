@@ -1,0 +1,6 @@
+Coloque aqui a foto do carregador solar, com EXATAMENTE este nome:
+
+  carregador-solar.jpg
+
+O logotipo da HÉLIOS já está desenhado em SVG dentro do index.html.
+Se a foto ainda não estiver nesta pasta, o site mostra uma ilustração substituta.
